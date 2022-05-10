@@ -17,8 +17,6 @@ const fetchList = async (url: string) => {
 	return await resolve.json()
 }
 
-console.log(API_KEY)
-
 const allLists: AllLists = {
 	getPageList: async () => [
 		{
@@ -27,9 +25,9 @@ const allLists: AllLists = {
 			list: await fetchList(`${API_BASE}/trending/movie/week?api_key=${API_KEY}${lang}`)
 		},
 		{
-			name: 'action',
-			title: 'Ação',
-			list: await fetchList(`${API_BASE}/discover/movie?api_key=${API_KEY}&with_genres=28${lang}`)
+			name: 'documentary',
+			title: 'Documentário',
+			list: await fetchList(`${API_BASE}/discover/movie?api_key=${API_KEY}&with_genres=99${lang}`)
 		},
 		{
 			name: 'adventure',
@@ -37,14 +35,14 @@ const allLists: AllLists = {
 			list: await fetchList(`${API_BASE}/discover/movie?api_key=${API_KEY}&with_genres=12${lang}`)
 		},
 		{
-			name: 'documentary',
-			title: 'Documentário',
-			list: await fetchList(`${API_BASE}/discover/movie?api_key=${API_KEY}&with_genres=99${lang}`)
-		},
-		{
 			name: 'family',
 			title: 'Para família',
 			list: await fetchList(`${API_BASE}/discover/movie?api_key=${API_KEY}&with_genres=10751${lang}`)
+		},
+		{
+			name: 'action',
+			title: 'Ação',
+			list: await fetchList(`${API_BASE}/discover/movie?api_key=${API_KEY}&with_genres=28${lang}`)
 		},
 		{
 			name: 'horror',

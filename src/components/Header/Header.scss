@@ -1,0 +1,9 @@
+@use '../../style/variables' as *;
+
+.page-header {
+	display: flex;
+	align-items: center;
+	padding: 0px 30px;
+	height: 80px;
+	background-color: $dark-blue;
+}
