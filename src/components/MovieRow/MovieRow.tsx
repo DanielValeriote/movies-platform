@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import {IMoviesList} from '../../utils/moviesLists';
 import { MovieItem } from '../MovieItem/MovieItem';
 import { BsArrowLeftShort, BsArrowRightShort } from 'react-icons/bs'
+import { MovieData } from '../../pages/Home';
 import "./MovieRow.scss";
 
 const imgWidth = 200;
@@ -12,9 +12,8 @@ interface Props {
 	list: any[]
 }
 
-const MovieRow: React.FC<Props> = ({title, list}) => {
+const MovieRow = ({title, list}: Props) => {
 	const fullListWidth = list.length * imgWidth;
-
 	const [hScrollPosition, setHScrollPosition] = useState<number>(0);
 
 	const arrowLeftAction = () => {
@@ -43,12 +42,23 @@ const MovieRow: React.FC<Props> = ({title, list}) => {
 				width: fullListWidth
 			}}>
 			{
-				list.map((movie): any => <MovieItem 
-					title={movie.title} 
-					img={`${imageBaseUrl}${movie.poster_path}`}
-					key={movie.id}
-					/>
-				)
+				list.map((movie: MovieData) => {
+					if(
+						movie && typeof (movie) === 'object' &&
+						movie.hasOwnProperty('title') &&
+						movie.hasOwnProperty('poster_path') &&
+						movie.hasOwnProperty('id')						
+						) {
+
+						return <MovieItem 
+							title={movie.title} 
+							img={`${imageBaseUrl}${movie.poster_path}`}
+							id={movie.id}
+							key={movie.id}
+							/>
+						}
+					}
+					)
 			}
 			</ul>
 		</div>

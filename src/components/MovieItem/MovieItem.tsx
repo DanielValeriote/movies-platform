@@ -1,14 +1,20 @@
+import React from 'react'
+import {fetchSingleMovie} from '../../utils/fetchSingleMovie'
+import { useNavigate } from 'react-router-dom'
 import './MovieItem.scss'
 
 interface Props {
 	img: string,
-	title: string
+	title: string,
+	id: number
 }
 
-const MovieItem: React.FC<Props> = ({img, title}) => {
+const MovieItem = ({img, title, id}: Props) => {
+	const navigate = useNavigate();
+
 	return (
 		<li className="movieItem">
-			<img src={img} alt={title} />
+			<img src={img} alt={title} onClick={() => navigate(`/movie/${id}`)} />
 		</li>
 	)
 }

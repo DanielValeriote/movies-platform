@@ -1,12 +1,34 @@
+@use '../../style/variables.scss' as *;
+
 .movieItem {
+	position: relative;
 	transform: scale(.9);
+	display: flex;
+	flex-direction: column;
 	&:hover {
 		transition: ease .2s;
 		transform: scale(1);
 		cursor: pointer;
 	}
 	& img {
-		width: 100%;
+		width: 200px;
 		height: 100%;
+		border-radius: 10px;
 	}
+}
+
+.movieItemInfo {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	background-color: $strongest-blue;
+	padding: 5px;
+	font-weight: normal;
+	font-size: 1.1rem;
+	
+}
+
+.movieItem:hover .movieItemInfo {
+	display: block;
+	transition: ease .6s;
 }

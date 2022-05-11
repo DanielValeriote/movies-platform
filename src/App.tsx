@@ -1,28 +1,20 @@
-import React, { useEffect, useState } from 'react';
-// import { MovieItem } from './components/MovieItem/MovieItem';
-import moviesLists from './utils/moviesLists';
-import MovieRow from './components/MovieRow/MovieRow';
-import { Header } from './components/Header/Header';
+import Home from './pages/Home';
+
 import './App.scss';
+import {BrowserRouter as Router,Routes,Route,Link} from "react-router-dom";
+import { Header } from './components/Header/Header';
+import MoviePage from './pages/MoviePage';
 
 function App() {
-  const [allMoviesList, setAllMoviesList] = useState<any[]>([])
-
-  useEffect(() => {
-    moviesLists.getPageList().then((res: any) => setAllMoviesList(res))
-  }, [])
-
   return (
-    <div className="App">
-      <Header />
-      {
-        allMoviesList.length > 0 &&
-        allMoviesList.map((movieList): any => {
-          return <MovieRow key={movieList.name} title={movieList.title} list={movieList.list.results} />
-        })
-      }
-    </div>
-  );
+  <Router>
+    <Header />
+    <Routes>
+      <Route path='/' element={<Home />}/>
+      <Route path='/movie/:id' element={<MoviePage />}/>
+    </Routes>
+  </Router>
+  )
 }
 
 export default App;
