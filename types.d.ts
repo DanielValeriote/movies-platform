@@ -1,9 +1,25 @@
+export interface IMovie {
+	id: number,
+	title: string,
+	poster_path: string,
+}
+
+export type Results = IMovie[];
+
+export interface MovieList {
+	list: {
+		results: Results
+	},
+	title: string,
+	name: string
+}
+
 export interface Genre  {
 	id: number
 	name: string
 }
 
-export interface MovieData {
+export interface DetailedMovieData {
 	backdrop_path: string
 	title: string
 	overview: string

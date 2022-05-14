@@ -1,9 +1,9 @@
 import React from 'react';
 import './DetailedMovieCard.scss';
-import { Genre, MovieData } from '../../../types.d';
+import { DetailedMovieData } from '../../../types.d';
 
 type Props = {
-	movieData: MovieData
+	movieData: DetailedMovieData
 }
 
 const imgWidth = 780;
@@ -15,11 +15,19 @@ const DetailedMovieCard = ({ movieData }: Props) => {
 		<div className='detailedMovieCard'>
 			<img className='movieImage' src={`${imageBaseUrl}${backdrop_path}`} alt={title} />
 			<h2 className='movieTitle'>{title}</h2>
-			{overview && <p>
+			{overview && <p className='movieOverview'>
 				{overview}
 			</p>}
+			<ul className='genresList'>
+				{
+					genres.map(g => <li className='genreItem' key={g.id}>{g.name}</li>)
+				}
+			</ul>
 		</div>
 	)
+	// genres: Genre[]
+	// vote_average: number
+	// vote_count: number
 }
 
 export default DetailedMovieCard

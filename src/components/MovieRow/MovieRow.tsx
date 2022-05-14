@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { MovieItem } from '../MovieItem/MovieItem';
 import { BsArrowLeftShort, BsArrowRightShort } from 'react-icons/bs'
-import { MovieData } from '../../pages/Home';
+import { IMovie } from '../../../types';
 import "./MovieRow.scss";
 
 const imgWidth = 200;
@@ -42,7 +42,7 @@ const MovieRow = ({title, list}: Props) => {
 				width: fullListWidth
 			}}>
 			{
-				list.map((movie: MovieData) => {
+					list.map((movie: IMovie) => {
 					if(
 						movie && typeof (movie) === 'object' &&
 						movie.hasOwnProperty('title') &&

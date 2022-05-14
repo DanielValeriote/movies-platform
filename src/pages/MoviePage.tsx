@@ -1,9 +1,9 @@
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { fetchSingleMovie } from '../utils/fetchSingleMovie';
-import { SpinnerCircular } from 'spinners-react';
 import DetailedMovieCard from '../components/DetailedMovieCard/DetailedMovieCard';
-import {Genre, MovieData} from '../../types.d'
+import {DetailedMovieData} from '../../types.d'
+import Loading from '../components/Loading';
 import './MoviePage.scss';
 
 interface Props {
@@ -11,11 +11,10 @@ interface Props {
 }
 
 const MoviePage = ({}: Props) => {
-	let imgWidth = window.innerWidth < 500 ? 300 : 780;
-	const imageBaseUrl = `https://image.tmdb.org/t/p/w${imgWidth}`;
+	// let imgWidth = window.innerWidth < 500 ? 300 : 780;
 
 	const params = useParams();
-	const [movieData, setMovieData] = useState<MovieData>();
+	const [movieData, setMovieData] = useState<DetailedMovieData>();
 	const [isLoading, setIsLoading] = useState<boolean>(true);
 
 	useEffect(() => {
@@ -26,7 +25,7 @@ const MoviePage = ({}: Props) => {
 					setMovieData(res);
 				})
 		};
-	}, []);
+	}, [params.id]);
 
 	useEffect(( ) => {
 		if(movieData) {
@@ -41,8 +40,7 @@ const MoviePage = ({}: Props) => {
 
 	return <main className='container'>
 		{
-			isLoading ? <div className='loadingContainer'><SpinnerCircular color='#1b1c1e' /></div> : 
-			movieData && <DetailedMovieCard movieData={movieData} />
+			isLoading ? <Loading /> : movieData && <DetailedMovieCard movieData={movieData} />
 		}
 	</main>
 }
