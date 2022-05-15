@@ -1,6 +1,5 @@
-import React from 'react';
-import './DetailedMovieCard.scss';
 import { DetailedMovieData } from '../../../types.d';
+import './DetailedMovieCard.scss';
 
 type Props = {
 	movieData: DetailedMovieData

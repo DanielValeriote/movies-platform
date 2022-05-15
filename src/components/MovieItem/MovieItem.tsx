@@ -1,5 +1,3 @@
-import React from 'react'
-import {fetchSingleMovie} from '../../utils/fetchSingleMovie'
 import { useNavigate } from 'react-router-dom'
 import './MovieItem.scss'
 
