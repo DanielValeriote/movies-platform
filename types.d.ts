@@ -27,3 +27,8 @@ export interface DetailedMovieData {
 	vote_average: number
 	vote_count: number
 }
+
+export interface GenericResponse {
+	page: number,
+	results: IMovie[]
+}

@@ -1,7 +1,15 @@
+@use '../../style/variables.scss' as *;
+
 .searchInput {
 	border-radius: 10px;
 	padding: 10px;
 	border: 0;
 	outline: 0;
 	font-size: 1rem;
+}
+
+.autoCompleteItems {
+	background-color: $main-white;
+	border: 1px solid $main-black;
+	color: $main-black;
 }
