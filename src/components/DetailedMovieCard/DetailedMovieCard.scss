@@ -12,6 +12,7 @@
 	border-radius: 15px;
 	color: $main-white;
 	text-align: center;
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
 	& .movieTitle {
 		font-weight: normal	;
 		font-size: 2rem;
@@ -31,11 +32,11 @@
 }
 
 .genreItem {
-	border: 1px solid $main-black;
 	border-radius: 10px;
 	padding: 5px;
 	font-weight: bold;
 	background-color: $main-white;
 	color: $main-black;
 	opacity: .9;
+	box-shadow: 0px 0px 3px rgba($color: $main-white, $alpha: .4);
 }
