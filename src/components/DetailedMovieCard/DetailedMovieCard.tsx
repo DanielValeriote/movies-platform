@@ -23,11 +23,16 @@ const DetailedMovieCard = ({ movieData }: Props) => {
 					genres.map(g => <li className='genreItem' key={g.id}>{g.name}</li>)
 				}
 			</ul>
+			<section className="movieVotes">
+				<div className="voteAverage" style={{color: vote_average > 6.5 ? 'green' : vote_average < 5 ? 'red' : 'yellow'}}>
+					{vote_average}
+				</div>
+				<div className="voteCount">
+					({vote_count})
+				</div>
+			</section>
 		</div>
 	)
-	// genres: Genre[]
-	// vote_average: number
-	// vote_count: number
 }
 
 export default DetailedMovieCard
