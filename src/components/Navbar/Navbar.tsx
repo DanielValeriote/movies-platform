@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import './Navbar.scss'
 
-export const Header = () => {
+const Navbar = () => {
 	return <nav className='page-navbar'>
 		<ul className='navbar-list'>
 			<li className='navbar-item'>
@@ -12,3 +12,5 @@ export const Header = () => {
 		</ul>
 	</nav>
 }
+
+export default Navbar
