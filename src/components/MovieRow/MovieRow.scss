@@ -59,3 +59,9 @@
 .rightArrow {
 	right: 0;
 }
+
+@media screen and (max-width: 650px) {
+	.rowMovementArrow {
+		opacity: 1;
+	}
+}

@@ -27,7 +27,7 @@ const DetailedMovieCard = ({ movieData }: Props) => {
 					{vote_average}
 				</div>
 				<div className="voteCount">
-					({vote_count})
+					({vote_count} votos)
 				</div>
 			</section>
 		</div>

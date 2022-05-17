@@ -22,7 +22,7 @@ const SearchInput = ({ searchValue, setSearchValue, handleChange}: Props) => {
 		}
 	}, [searchValue])
 	return (<div className='searchInputContainer'>
-		<input className="searchInput" type="text" value={searchValue} onChange={handleChange} placeholder='Busca'/>
+		<input className="searchInput" type="text" value={searchValue} onChange={handleChange} placeholder='Busca' spellCheck={false}/>
 		<ul className='autoCompleteList'>
 			{
 				suggestions && suggestions.map((s: IMovie): JSX.Element => {
