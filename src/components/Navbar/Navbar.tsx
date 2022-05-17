@@ -18,9 +18,7 @@ const Navbar = () => {
 				</NavLink>
 			</li>
 		</ul>
-		<div className="searchInputContainer">
-			<SearchInput searchValue={searchValue} handleChange={handleChange} />
-		</div>
+		<SearchInput searchValue={searchValue} handleChange={handleChange} />
 	</nav>
 }
 

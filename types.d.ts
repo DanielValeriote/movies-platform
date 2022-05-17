@@ -2,6 +2,7 @@ export interface IMovie {
 	id: number,
 	title: string,
 	poster_path: string,
+	name?: string
 }
 
 export type Results = IMovie[];

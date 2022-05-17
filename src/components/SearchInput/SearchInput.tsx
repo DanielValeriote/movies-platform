@@ -1,6 +1,7 @@
 import {useState, useEffect} from 'react';
 import { GenericResponse, IMovie } from '../../../types.d'
 import { searchByTitle } from '../../utils/searchByTitle';
+import { Link } from 'react-router-dom';
 import './SearchInput.scss';
 
 type Props = {
@@ -9,23 +10,38 @@ type Props = {
 };
 
 const SearchInput = ({ searchValue, handleChange}: Props) => {
-	const [suggestions, setSuggestions] = useState<GenericResponse>();
+	const [suggestions, setSuggestions] = useState<IMovie[]>();
 	useEffect(() => {
 		if (searchValue.length >= 2) {
 			searchByTitle(searchValue)
-				.then((res) => {
-					setSuggestions(res)
-					} 
-				)
+				.then((res: GenericResponse) => {
+					let limitedResults = res.results.slice(0, 6);
+					setSuggestions(limitedResults);
+				})
 				.catch(err => console.error(err.message))
+		} else {
+			setSuggestions([])
 		}
 	}, [searchValue])
-	return (<>
+	return (<div className='searchInputContainer'>
 		<input className="searchInput" type="text" value={searchValue} onChange={handleChange} placeholder='nome do filme'/>
-		<ul className='autoCompleteItems'>
-			
+		<ul className='autoCompleteList'>
+			{
+				suggestions && suggestions.map((s: IMovie): JSX.Element => {
+					return <>
+					{
+						s.title &&
+						<li key={s.id} className='suggestionItem'>
+							<Link to={`/movie/${s.id}`}>
+								<p>{s.title ? s.title : s.name && s.name}</p>
+							</Link>
+						</li>
+						}
+					</> 
+				})
+			}
 		</ul>
-	</>
+	</div>
 	);
 };
 

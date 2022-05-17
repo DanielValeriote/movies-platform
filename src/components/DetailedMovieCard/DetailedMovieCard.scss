@@ -13,11 +13,12 @@
 	color: $main-white;
 	text-align: center;
 	box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
-	& .movieTitle {
-		font-weight: normal	;
-		font-size: 2rem;
-		width: 100%;
-	}
+}
+
+.movieTitle {
+	font-weight: normal	;
+	font-size: 2rem;
+	width: 100%;
 }
 
 .movieImage {
