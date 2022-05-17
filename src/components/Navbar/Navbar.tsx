@@ -14,11 +14,11 @@ const Navbar = () => {
 		<ul className='navbar-list'>
 			<li className='navbar-item'>
 				<NavLink to="/">
-					Home
+					Início
 				</NavLink>
 			</li>
 		</ul>
-		<SearchInput searchValue={searchValue} handleChange={handleChange} />
+		<SearchInput searchValue={searchValue} setSearchValue={setSearchValue} handleChange={handleChange} />
 	</nav>
 }
 

@@ -9,6 +9,7 @@ const Home = () => {
 	const [isLoading, setIsLoading] = useState<boolean>(true);
 
 	useEffect(() => {
+		document.title = 'Início'
 		moviesLists.getPageList().then((res: any) => {
 			setIsLoading(false)
 			setAllMoviesList(res)

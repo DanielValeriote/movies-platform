@@ -15,7 +15,7 @@ const MoviePage = () => {
 		if(params.id) {
 			fetchSingleMovie(params.id)
 				.then(res => {
-					if(res.success === false) throw new Error('tome');
+					if(res.success === false) throw new Error(`API response was unsuccessful.`);
 					setMovieData(res);
 				})
 		};
@@ -25,9 +25,10 @@ const MoviePage = () => {
 		if(movieData) {
 			const {title, backdrop_path, genres, vote_average, vote_count} = movieData;
 			if(title && backdrop_path && genres && vote_average && vote_count) {
-				setIsLoading(false)
+				setIsLoading(false);
+				document.title = title;
 			} else {
-				console.log(movieData)
+				console.log(movieData);
 			}
 		}
 	}, [movieData]);

@@ -5,11 +5,12 @@ import { Link } from 'react-router-dom';
 import './SearchInput.scss';
 
 type Props = {
-	searchValue: string
-	handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void
+	searchValue: string,
+	setSearchValue: React.Dispatch<React.SetStateAction<string>>,
+	handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void,
 };
 
-const SearchInput = ({ searchValue, handleChange}: Props) => {
+const SearchInput = ({ searchValue, setSearchValue, handleChange}: Props) => {
 	const [suggestions, setSuggestions] = useState<IMovie[]>();
 	useEffect(() => {
 		if (searchValue.length >= 2) {
@@ -21,7 +22,7 @@ const SearchInput = ({ searchValue, handleChange}: Props) => {
 		}
 	}, [searchValue])
 	return (<div className='searchInputContainer'>
-		<input className="searchInput" type="text" value={searchValue} onChange={handleChange} placeholder='nome do filme'/>
+		<input className="searchInput" type="text" value={searchValue} onChange={handleChange} placeholder='Busca'/>
 		<ul className='autoCompleteList'>
 			{
 				suggestions && suggestions.map((s: IMovie): JSX.Element => {
@@ -29,7 +30,7 @@ const SearchInput = ({ searchValue, handleChange}: Props) => {
 					{
 						s.title &&
 						<li key={s.id} className='suggestionItem'>
-							<Link to={`/movie/${s.id}`}>
+									<Link to={`/movie/${s.id}`} onClick={() => setSearchValue('')}>
 								<p>{s.title ? s.title : s.name && s.name}</p>
 							</Link>
 						</li>
