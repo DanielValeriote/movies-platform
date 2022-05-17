@@ -1,4 +1,3 @@
-import React from 'react'
 import { useEffect, useState } from 'react';
 import moviesLists from '../utils/moviesLists';
 import MovieRow from '../components/MovieRow/MovieRow';

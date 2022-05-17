@@ -6,13 +6,7 @@ import {DetailedMovieData} from '../../types.d'
 import Loading from '../components/Loading';
 import './MoviePage.scss';
 
-interface Props {
-
-}
-
-const MoviePage = ({}: Props) => {
-	// let imgWidth = window.innerWidth < 500 ? 300 : 780;
-
+const MoviePage = () => {
 	const params = useParams();
 	const [movieData, setMovieData] = useState<DetailedMovieData>();
 	const [isLoading, setIsLoading] = useState<boolean>(true);

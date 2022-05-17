@@ -14,10 +14,7 @@ const SearchInput = ({ searchValue, handleChange}: Props) => {
 	useEffect(() => {
 		if (searchValue.length >= 2) {
 			searchByTitle(searchValue)
-				.then((res: GenericResponse) => {
-					let limitedResults = res.results.slice(0, 6);
-					setSuggestions(limitedResults);
-				})
+				.then((res: GenericResponse) => setSuggestions(res.results.slice(0, 6)))
 				.catch(err => console.error(err.message))
 		} else {
 			setSuggestions([])

@@ -42,3 +42,27 @@
 .searchInputContainer {
 	grid-area: searchInputContainer;
 }
+
+@media screen and (max-width: 480px) {
+	.page-navbar {
+		grid-template:
+				'navbar-list' 1fr
+				'searchInputContainer' 1fr
+				/ 1fr;
+			height: 180px;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			& .navbar-list {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			& .searchInputContainer {
+				margin: 0 auto;
+				& input {
+					left: 0;
+				}
+			}
+	}
+}
