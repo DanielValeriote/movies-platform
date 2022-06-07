@@ -1,6 +1,6 @@
-import {useState} from 'react';
+import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import SearchInput from '../SearchInput/SearchInput';
+import { SearchInput } from '../';
 import './Navbar.scss';
 
 const Navbar = () => {

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { MovieItem } from '../MovieItem/MovieItem';
+import { MovieItem } from '../';
 import { BsArrowLeftShort, BsArrowRightShort } from 'react-icons/bs'
 import { IMovie } from '../../../types';
 import "./MovieRow.scss";

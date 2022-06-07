@@ -1,9 +1,8 @@
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import { DetailedMovieCard, Loading } from '../components';
 import { fetchSingleMovie } from '../utils/fetchSingleMovie';
-import DetailedMovieCard from '../components/DetailedMovieCard/DetailedMovieCard';
-import {DetailedMovieData} from '../../types.d'
-import Loading from '../components/Loading';
+import { DetailedMovieData } from '../../types.d';
 import './MoviePage.scss';
 
 const MoviePage = () => {

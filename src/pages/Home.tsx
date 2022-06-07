@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
+import { MovieRow, Loading } from '../components/';
 import moviesLists from '../utils/moviesLists';
-import MovieRow from '../components/MovieRow/MovieRow';
-import Loading from '../components/Loading';
 import { MovieList } from '../../types';
 
 const Home = () => {

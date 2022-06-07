@@ -17,4 +17,4 @@ const MovieItem = ({img, title, id}: Props) => {
 	)
 }
 
-export {MovieItem};
+export default MovieItem;
