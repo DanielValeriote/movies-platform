@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
-import { GenericResponse, IMovie } from '../../types.d';
-// import { searchByTitle } from '../../utils/searchByTitle';
-import { InputContainer, Input, AutoCompleteList, SuggestionItem } from './styled';
+import { GenericResponse, IMovie } from '../../types';
+import { InputContainer, Input } from './styled';
 
 type Props = {
 	searchValue: string,
@@ -23,22 +22,6 @@ const SearchInput = ({ searchValue, setSearchValue, handleChange}: Props) => {
 
 	return (<InputContainer>
 		<Input type="text" value={searchValue} onChange={handleChange} placeholder='Busca' spellCheck={false}/>
-		<AutoCompleteList>
-			{
-				suggestions && suggestions.map((s: IMovie): JSX.Element => {
-					return <>
-					{
-						s.title &&
-						<SuggestionItem key={s.id}>
-							{/* <Link to={`/movie/${s.id}`} onClick={() => setSearchValue('')}>
-								<p>{s.title ? s.title : s.name && s.name}</p>
-							</Link> */}
-						</SuggestionItem>
-						}
-					</> 
-				})
-			}
-		</AutoCompleteList>
 	</InputContainer>
 	);
 };

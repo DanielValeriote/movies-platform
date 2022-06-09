@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { SearchInput } from '../';
-import {Nav, NavbarList, NavbarItem} from './styled'
+import { SearchInput } from '..';
+import { Nav, NavbarList, NavbarItem } from './styled'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 

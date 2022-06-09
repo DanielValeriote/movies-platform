@@ -1,4 +1,4 @@
-import { DetailedMovieData } from '../../types.d';
+import { DetailedMovieData } from '../../types';
 import { DetailedMovie, MovieTitle, MovieImage, GenresList, GenreItem, MovieVotes } from './styled';
 
 type Props = {movieData: DetailedMovieData};

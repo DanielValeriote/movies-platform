@@ -21,6 +21,7 @@ export const RowTitle = styled.h1`
 	text-shadow: 0px 0px 3px rgba(0,0,0,0.2);
 	margin-bottom: 25px;
 	padding-left: 30px;
+	font-weight: normal;
 `;
 
 export const RowMovementArrow = styled.span<MArrowProps>`

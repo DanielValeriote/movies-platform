@@ -1,8 +1,7 @@
-import DetailedMovieCard from './DetailedMovieCard/DetailedMovieCard';
-import MovieItem from './MovieItem/MovieItem';
-import MovieRow from './MovieRow/MovieRow';
-import Navbar from './Navbar/Navbar';
-import SearchInput from './SearchInput/SearchInput';
-// import Loading from './Loading';
+import DetailedMovieCard from './DetailedMovieCard';
+import MovieItem from './MovieItem';
+import MovieRow from './MovieRow';
+import Navbar from './Navbar';
+import SearchInput from './SearchInput';
 
 export { Navbar, SearchInput, MovieItem, MovieRow, DetailedMovieCard };

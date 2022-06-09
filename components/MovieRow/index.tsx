@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { MovieItem } from '../';
+import { MovieItem } from '..';
 import { BsArrowLeftShort, BsArrowRightShort } from 'react-icons/bs'
 import { IMovie } from '../../types';
 import { RowContainer, MoviesList, MoviesListArea, RowTitle, RowMovementArrow } from './styled';

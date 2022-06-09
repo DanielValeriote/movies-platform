@@ -11,21 +11,20 @@ export const NavbarList = styled.ul`
 `;
 
 export const Nav = styled.nav`
-	padding: 0px 30px;
-	height: 80px;
-	background-color: ${props => props.theme.colors.mainBlack};
+	padding: 10px 30px;
+	background-color: #303030;
 	box-shadow: 0px 0px 10px rgba(0,0,0,.7);
 	display: grid;
-	grid-template: 'navbar-list searchInputContainer' 100% / 10fr 1fr;
+	grid-template: 'navbar-list searchInputContainer' 100% / auto 210px;
+	gap: 10px;
 	align-items: center;
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 590px) {
 	&	{
 		grid-template:
 			'navbar-list' 1fr
 			'searchInputContainer' 1fr
 			/ 1fr;
-		height: 180px;
 		align-items: center;
 		justify-content: center;
 		text-align: center;
@@ -39,11 +38,11 @@ export const Nav = styled.nav`
 `;
 
 export const NavbarItem = styled.li`
-	font-weight: normal;
-	font-size: 1.7rem;
+	font-weight: bold;
+	font-size: 1.4rem;
 	color: ${props => props.theme.colors.mainWhite};
 	&:hover {
-		text-shadow: 0px 0px 3px ${props => props.theme.colors.mainWhite};
+		text-shadow: 0px 0px 2px ${props => props.theme.colors.mainWhite};
 		transition: all .2s ease;
 	}
 	& a {

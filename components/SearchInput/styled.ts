@@ -1,53 +1,24 @@
 import styled from "styled-components";
 
 export const InputContainer = styled.div`
-	position: relative;
-	width: 190px;
+	display: flex;
+	align-items: center;
+	justify-items: center;
+	width: 100%;
 	height: 50px;
 `;
 
-export const AutoCompleteList = styled.ul`
-	display: none;
-	z-index: 10;
-	background-color: ${props => props.theme.colors.mainWhite};
-	color: ${props => props.theme.colors.mainBlue};
-	position: absolute;
-	border-top: 0;
-	top: 100%;
-	left: 0px;
-	width: 100%;
-	border: 2px solid ${props => props.theme.colors.mainBlue};
-	border-bottom: 0;
-	font-weight: bold;
-`;
-
 export const Input = styled.input`
-	position: absolute;
 	padding: 10px;
-	border: 0;
+	padding-left: 20px;
+	border: 2px solid ${props => props.theme.colors.mainBlue};
+	background-color: ${props => props.theme.colors.mainBlack};
+	box-shadow: 0px 5px 10px rgba(0,0,0,0.3);
 	outline: 0;
 	font-size: 1rem;
-	height: 100%;
 	width: 100%;
-	border-radius: 0px;
-	border: 2px solid ${props => props.theme.colors.mainBlue};
-	border-bottom: 0;
-	font-weight: bold;
-
-	&:focus + ${AutoCompleteList}, ${AutoCompleteList}:hover {
-		display: block;
-		transition: all ease .1s;	
-	}
-`;
-
-export const SuggestionItem = styled.li`
-	padding: 5px;
-	border-bottom: 2px solid ${props => props.theme.colors.mainBlue};
-	display: grid;
-	width: 100%;
-	&:hover {
-		background-color: ${props => props.theme.colors.mainBlue};
-		color: ${props => props.theme.colors.mainWhite};
-		transition: all ease .1s;
-	}
+	border-radius: 30px;
+	max-width: 250px;
+	margin: auto;
+	color: ${props => props.theme.colors.mainWhite};
 `;

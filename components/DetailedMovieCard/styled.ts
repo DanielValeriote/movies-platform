@@ -1,7 +1,6 @@
 import styled from "styled-components"
 
 export const DetailedMovie = styled.div`
-	border: 1px solid gray;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -12,15 +11,13 @@ export const DetailedMovie = styled.div`
 	border-radius: 15px;
 	color: ${(props) => props.theme.colors.mainWhite};
 	text-align: center;
-	box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
-
 	& p {
 		max-width: 550px;
 	}
 `;
 
 export const MovieTitle = styled.h2`
-	font-weight: normal	;
+	font-weight: bold;
 	font-size: 2rem;
 	width: 100%;
 `;
