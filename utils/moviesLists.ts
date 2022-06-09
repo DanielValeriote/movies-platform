@@ -1,4 +1,4 @@
-const API_BASE = 'https://api.themoviedb.org/3'
+const API_BASE = 'https://api.themoviedb.org/3';
 const API_KEY = process.env.API_KEY;
 const lang = '&language=pt-BR';
 
@@ -14,7 +14,7 @@ interface AllLists {
 
 const fetchList = async (url: string) => {
 	const resolve = await fetch(url);
-	return await resolve.json()
+	return await resolve.json();
 }
 
 const allLists: AllLists = {
@@ -50,6 +50,6 @@ const allLists: AllLists = {
 			list: await fetchList(`${API_BASE}/discover/movie?api_key=${API_KEY}&with_genres=27${lang}`)
 		},
 	]
-}
+};
 
-export default allLists
+export default allLists;

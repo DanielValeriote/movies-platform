@@ -3,7 +3,7 @@ import styled from "styled-components";
 type MArrowProps = {direction: "right" | "left"};
 
 export const RowContainer = styled.div`
-	margin-top: 75px;
+	margin-bottom: 75px;
 	user-select: none;
 `;
 

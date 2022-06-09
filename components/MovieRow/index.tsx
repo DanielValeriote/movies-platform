@@ -9,7 +9,7 @@ const imageBaseUrl = `https://image.tmdb.org/t/p/w${imgWidth}`;
 
 interface Props {
 	title: string,
-	list: any[]
+	list: IMovie[]
 }
 
 const MovieRow = ({title, list}: Props) => {
@@ -54,6 +54,7 @@ const MovieRow = ({title, list}: Props) => {
 						return <MovieItem 
 							title={movie.title} 
 							img={`${imageBaseUrl}${movie.poster_path}`}
+							originalTitle={movie.original_title}
 							id={movie.id}
 							key={movie.id}
 							/>

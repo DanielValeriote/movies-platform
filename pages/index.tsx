@@ -23,7 +23,7 @@ const Home: NextPage = ({ allMoviesList }: InferGetStaticPropsType<typeof getSta
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
+      <main style={{paddingTop: "30px"}}>
         {
           allMoviesList.map((movieList: MovieList): JSX.Element => {
             return <MovieRow key={movieList.name} title={movieList.title} list={movieList.list.results} />

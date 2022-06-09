@@ -15,4 +15,4 @@ export const MovieCard = styled.li`
 		width: 200px;
 		height: 100%;
 	}
-`
+`;

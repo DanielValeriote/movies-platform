@@ -2,7 +2,8 @@ export interface IMovie {
 	id: number,
 	title: string,
 	poster_path: string,
-	name?: string
+	name?: string,
+	original_title: string,
 }
 
 export type Results = IMovie[];
@@ -26,7 +27,8 @@ export interface DetailedMovieData {
 	overview: string
 	genres: Genre[]
 	vote_average: number
-	vote_count: number
+	vote_count: number,
+	original_title: string
 }
 
 export interface GenericResponse {

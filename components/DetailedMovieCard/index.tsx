@@ -4,14 +4,14 @@ import { DetailedMovie, MovieTitle, MovieImage, GenresList, GenreItem, MovieVote
 type Props = {movieData: DetailedMovieData};
 
 const imgWidth = 780;
-const imageBaseUrl = `https://image.tmdb.org/t/p/w${imgWidth}`;
+const imageBaseUrl = `https:/image.tmdb.org/t/p/w${imgWidth}`;
 
 const DetailedMovieCard = ({ movieData }: Props) => {
-	const {title, overview, backdrop_path, genres, vote_average, vote_count } = movieData
+	const {title, overview, backdrop_path, genres, vote_average, vote_count, original_title } = movieData
 	return (
 		<DetailedMovie>
-			<MovieImage src={`${imageBaseUrl}${backdrop_path}`} alt={title} />
-			<MovieTitle>{title}</MovieTitle>
+			<MovieImage src={`${imageBaseUrl}${backdrop_path}`} alt={title || original_title} />
+			<MovieTitle>{title || original_title}</MovieTitle>
 			{overview && <p>{overview}</p>}
 			<GenresList>
 				{
