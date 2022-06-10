@@ -6,7 +6,7 @@ type Props = {movieData: DetailedMovieData};
 const DetailedMovieCard = ({ movieData }: Props) => {
 	const {title, overview, backdrop_path, poster_path, genres, vote_average, vote_count, original_title } = movieData;
 
-	let imgWidth = backdrop_path ? 780 : 300;
+	let imgWidth = backdrop_path ? 780 : 342;
 	const imageBaseUrl = `https:/image.tmdb.org/t/p/w${imgWidth}`;
 
 	return (

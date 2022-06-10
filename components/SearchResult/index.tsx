@@ -7,14 +7,14 @@ type Props = {
 	movie: IMovie
 };
 
-const imgWidth = 300;
+const imgWidth = 185;
 const imageBaseUrl = `https:/image.tmdb.org/t/p/w${imgWidth}`;
 
 const SearchResult = ({movie}: Props) => {
 	return <MovieResult>
 		<Link href={`/movie/${movie.id}`} passHref>
 			<a>
-				<Image width={188} height={282} src={`${imageBaseUrl}${movie.poster_path}`} alt={movie.title}/>
+				<Image width={184} height={276} src={`${imageBaseUrl}${movie.poster_path}`} alt={movie.title}/>
 				<MovieTitle>{movie.title || movie.name}</MovieTitle>
 			</a>
 		</Link>

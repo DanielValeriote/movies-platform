@@ -4,7 +4,7 @@ import { MdOutlineArrowForwardIos, MdOutlineArrowBackIos } from 'react-icons/md'
 import { IMovie } from '../../types';
 import { RowContainer, MoviesList, MoviesListArea, RowTitle, RowMovementArrow } from './styled';
 
-const imgWidth = 200;
+const imgWidth = 185;
 const imageBaseUrl = `https://image.tmdb.org/t/p/w${imgWidth}`;
 
 interface Props {
