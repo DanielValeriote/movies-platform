@@ -1,5 +1,5 @@
 import { Form, Input, SearchButton, InputWrapper } from './styled';
-import Image from 'next/image';
+import {FaSearch} from 'react-icons/fa';
 
 type Props = {
 	searchValue: string,
@@ -12,7 +12,7 @@ const SearchBar = ({ searchValue, handleChange}: Props) => {
 		<InputWrapper>
 			<Input type="text" value={searchValue} onChange={handleChange} placeholder='Busca' spellCheck={false}/>
 			<SearchButton>
-				<Image src="/assets/search-icon.png" width={15} height={15} alt="Busca"/>
+				<FaSearch width={15} height={15} />
 			</SearchButton>
 		</InputWrapper>
 	</Form>

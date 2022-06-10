@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { MovieItem } from '..';
-import { BsArrowLeftShort, BsArrowRightShort } from 'react-icons/bs'
+import { MdOutlineArrowForwardIos, MdOutlineArrowBackIos } from 'react-icons/md'
 import { IMovie } from '../../types';
 import { RowContainer, MoviesList, MoviesListArea, RowTitle, RowMovementArrow } from './styled';
 
@@ -32,10 +32,10 @@ const MovieRow = ({title, list}: Props) => {
 		<RowTitle>{title}</RowTitle>
 		<MoviesListArea>
 			<RowMovementArrow direction='left' style={{display: hScrollPosition === 0 ? 'none' : 'flex'}} onClick={() => arrowLeftAction()}>
-				<BsArrowLeftShort fontSize="100px" opacity={.7} />
+				<MdOutlineArrowBackIos size={25} opacity={.8} />
 			</RowMovementArrow>
 			<RowMovementArrow direction='right' onClick={() => arrowRightAction()}>
-				<BsArrowRightShort fontSize="100px" opacity={.7} />
+				<MdOutlineArrowForwardIos size={25} opacity={.8} />
 			</RowMovementArrow>
 			<MoviesList style={{
 				marginLeft: hScrollPosition+'px',
