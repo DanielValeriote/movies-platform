@@ -10,7 +10,7 @@ const imageBaseUrl = `https://image.tmdb.org/t/p/w${imgWidth}`;
 interface Props {
 	title: string,
 	list: IMovie[]
-}
+};
 
 const MovieRow = ({title, list}: Props) => {
 	const fullListWidth = list.length * imgWidth;
@@ -18,14 +18,14 @@ const MovieRow = ({title, list}: Props) => {
 
 	const arrowLeftAction = () => {
 		if (hScrollPosition + Math.round(window.innerWidth / 2) >= 0) setHScrollPosition(0)
-		else setHScrollPosition((currPosition => currPosition + Math.round(window.innerWidth / 2)))
+		else setHScrollPosition((currPosition => currPosition + Math.round(window.innerWidth / 2)));
 	}
 
 	const arrowRightAction = () => {
 		if((window.innerWidth - fullListWidth) > hScrollPosition - Math.round(window.innerWidth / 2)) {
-			setHScrollPosition((window.innerWidth - fullListWidth) + 350)
+			setHScrollPosition((window.innerWidth - fullListWidth) + 350);
 		}
-		setHScrollPosition((currPosition => currPosition - imgWidth * 2))
+		setHScrollPosition((currPosition => currPosition - imgWidth * 2));
 	}
 
 	return <RowContainer>
@@ -48,7 +48,7 @@ const MovieRow = ({title, list}: Props) => {
 						movie && typeof (movie) === 'object' &&
 						movie.hasOwnProperty('title') &&
 						movie.hasOwnProperty('poster_path') &&
-						movie.hasOwnProperty('id')						
+						movie.hasOwnProperty('id')		
 						) {
 
 						return <MovieItem 
@@ -60,11 +60,11 @@ const MovieRow = ({title, list}: Props) => {
 							/>
 						}
 					}
-					)
+				)
 			}
 			</MoviesList>
 		</MoviesListArea>
 	</RowContainer>
-}
+};
 
-export default MovieRow
+export default MovieRow;

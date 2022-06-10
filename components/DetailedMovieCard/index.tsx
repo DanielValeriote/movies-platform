@@ -1,16 +1,17 @@
 import { DetailedMovieData } from '../../types';
-import { DetailedMovie, MovieTitle, MovieImage, GenresList, GenreItem, MovieVotes } from './styled';
+import { DetailedMovie, MovieTitle, StyledImage, GenresList, GenreItem, MovieVotes } from './styled';
 
 type Props = {movieData: DetailedMovieData};
 
-const imgWidth = 780;
-const imageBaseUrl = `https:/image.tmdb.org/t/p/w${imgWidth}`;
-
 const DetailedMovieCard = ({ movieData }: Props) => {
-	const {title, overview, backdrop_path, genres, vote_average, vote_count, original_title } = movieData
+	const {title, overview, backdrop_path, poster_path, genres, vote_average, vote_count, original_title } = movieData;
+
+	let imgWidth = backdrop_path ? 780 : 300;
+	const imageBaseUrl = `https:/image.tmdb.org/t/p/w${imgWidth}`;
+
 	return (
 		<DetailedMovie>
-			<MovieImage src={`${imageBaseUrl}${backdrop_path}`} alt={title || original_title} />
+			<StyledImage src={`${imageBaseUrl}${backdrop_path||poster_path}`} alt={title || original_title} width={backdrop_path ? 780 : 300} height={backdrop_path ? 439 : 450} />
 			<MovieTitle>{title || original_title}</MovieTitle>
 			{overview && <p>{overview}</p>}
 			<GenresList>
@@ -19,15 +20,16 @@ const DetailedMovieCard = ({ movieData }: Props) => {
 				}
 			</GenresList>
 			<MovieVotes>
+				{vote_average > 0 && 
 				<div style={{color: vote_average > 6.5 ? 'green' : vote_average < 5 ? 'red' : 'yellow', fontWeight: 'bold'}}>
 					{vote_average}
-				</div>
+				</div>}
 				<div>
 					({vote_count} votos)
 				</div>
 			</MovieVotes>
 		</DetailedMovie>
 	)
-}
+};
 
-export default DetailedMovieCard
+export default DetailedMovieCard;

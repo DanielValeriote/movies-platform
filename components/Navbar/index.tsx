@@ -1,16 +1,14 @@
 import { useState } from 'react';
-import { SearchInput } from '..';
-import { Nav, NavbarList, NavbarItem } from './styled'
-import Link from 'next/link'
-import { useRouter } from 'next/router'
+import { SearchBar } from '../';
+import { Nav, NavbarList, NavbarItem } from './styled';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 const Navbar = () => {
 	const [searchValue, setSearchValue] = useState<string>('');
-
-	const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setSearchValue(e.target.value)
-	}
-	const router = useRouter()
+	const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => setSearchValue(e.target.value);
+	
+	const router = useRouter();
 
 	return <Nav>
 		<NavbarList>
@@ -20,8 +18,8 @@ const Navbar = () => {
 				</Link>
 			</NavbarItem>
 		</NavbarList>
-		<SearchInput searchValue={searchValue} setSearchValue={setSearchValue} handleChange={handleChange} />
+		<SearchBar searchValue={searchValue} setSearchValue={setSearchValue} handleChange={handleChange} />
 	</Nav>
 }
 
-export default Navbar
+export default Navbar;

@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import Image from "next/image";
 
 export const DetailedMovie = styled.div`
 	display: flex;
@@ -6,14 +7,12 @@ export const DetailedMovie = styled.div`
 	align-items: center;
 	justify-content: center;
 	row-gap: 15px;
-	background-color: ${(props) => props.theme.colors.mainBlack};
+	background-color: ${props => props.theme.colors.mainBlack};
 	padding: 20px;
 	border-radius: 15px;
-	color: ${(props) => props.theme.colors.mainWhite};
+	color: ${props => props.theme.colors.mainWhite};
 	text-align: center;
-	& p {
-		max-width: 550px;
-	}
+	& p {	max-width: 550px;	}
 `;
 
 export const MovieTitle = styled.h2`
@@ -22,7 +21,7 @@ export const MovieTitle = styled.h2`
 	width: 100%;
 `;
 
-export const MovieImage = styled.img`
+export const StyledImage = styled(Image)`
 	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
 	max-width: 100%;
 	border-radius: 5px;

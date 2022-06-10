@@ -1,16 +1,15 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import Image from 'next/image';
 import { GetStaticProps, InferGetStaticPropsType } from 'next';
 import moviesLists from '../utils/moviesLists';
 import { MovieList } from '../types';
 import {MovieRow} from '../components';
 
-export const getStaticProps: GetStaticProps = async (context) => {
+export const getStaticProps: GetStaticProps = async () => {
   const allMoviesList = await moviesLists.getPageList();
   return {
     props: { allMoviesList },
-    revalidate: 43200 //update movies every 12 hours
+    revalidate: 43200 //updates homepage every 12 hours
   }
 }
 
@@ -30,12 +29,8 @@ const Home: NextPage = ({ allMoviesList }: InferGetStaticPropsType<typeof getSta
           })
         }
       </main>
-
-      <footer>
-        
-      </footer>
     </div>
   )
 }
 
-export default Home
+export default Home;

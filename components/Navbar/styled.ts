@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 export const NavbarList = styled.ul`
 	display: flex;
@@ -52,4 +52,4 @@ export const NavbarItem = styled.li`
 		opacity: 1;
 		color: ${props => props.theme.colors.mainWhite};
 	}
-`
+`;
