@@ -11,7 +11,7 @@ interface Props { movie: uncertainMovie };
 
 export const getStaticPaths: GetStaticPaths = async () => (
 	{
-		paths: [],
+		paths: [{ params: {id: '499932'} }],
 		fallback: true
 	}
 )

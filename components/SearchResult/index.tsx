@@ -8,7 +8,7 @@ type Props = {
 };
 
 const imgWidth = 185;
-const imageBaseUrl = `https:/image.tmdb.org/t/p/w${imgWidth}`;
+const imageBaseUrl = `https://image.tmdb.org/t/p/w${imgWidth}`;
 
 const SearchResult = ({movie}: Props) => {
 	return <MovieResult>
