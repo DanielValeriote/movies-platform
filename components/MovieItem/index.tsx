@@ -1,6 +1,5 @@
 import Link from 'next/link';
-import Image from 'next/image';
-import {MovieCard} from './styled';
+import { MovieCard, ImageContainer, StyledImage } from './styled';
 
 interface Props {
 	img: string,
@@ -13,7 +12,9 @@ const MovieItem = ({img, title, id, originalTitle}: Props) => {
 	return (
 		<MovieCard>
 			<Link href={`/movie/${id}`}>
-				<Image src={img} alt={title || originalTitle} width={200} height={300} />
+				<ImageContainer style={{width: 200, height: 300}}>
+					<StyledImage src={img} alt={title || originalTitle} width={200} height={300} />
+				</ImageContainer>
 			</Link>
 		</MovieCard>
 	)

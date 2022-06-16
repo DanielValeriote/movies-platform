@@ -4,6 +4,7 @@ export default {
 	colors: {
 		mainWhite: '#fefefe',
 		mainBlack: '#242424',
-		mainBlue: '#0cbaba'
+		mainBlue: '#0cbaba',
+		imagePlaceholder: '#101010',
 	}
-}
+};

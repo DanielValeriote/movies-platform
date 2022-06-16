@@ -1,5 +1,5 @@
 import { DetailedMovieData } from '../../types';
-import { DetailedMovie, MovieTitle, StyledImage, GenresList, GenreItem, MovieVotes } from './styled';
+import { DetailedMovie, MovieTitle, StyledImage, GenresList, GenreItem, MovieVotes, ImageContainer } from './styled';
 
 type Props = {movieData: DetailedMovieData};
 
@@ -11,7 +11,9 @@ const DetailedMovieCard = ({ movieData }: Props) => {
 
 	return (
 		<DetailedMovie>
-			<StyledImage src={`${imageBaseUrl}${backdrop_path||poster_path}`} alt={title || original_title} width={backdrop_path ? 780 : 300} height={backdrop_path ? 439 : 450} />
+			<ImageContainer style={{ width: imgWidth, height: backdrop_path ? 439 : 450 }}>
+				<StyledImage src={`${imageBaseUrl}${backdrop_path || poster_path}`} alt={title || original_title} width={imgWidth} height={backdrop_path ? 439 : 450} />
+			</ImageContainer>
 			<MovieTitle>{title || original_title}</MovieTitle>
 			{overview && <p>{overview}</p>}
 			<GenresList>

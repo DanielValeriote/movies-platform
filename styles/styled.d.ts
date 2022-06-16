@@ -7,6 +7,7 @@ declare module 'styled-components' {
 			mainWhite: string,
 			mainBlack: string,
 			mainBlue: string,
+			imagePlaceholder: string,
 		}
 	}
-}
+};

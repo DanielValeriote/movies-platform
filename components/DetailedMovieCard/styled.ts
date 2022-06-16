@@ -17,7 +17,7 @@ export const DetailedMovie = styled.div`
 
 export const MovieTitle = styled.h2`
 	font-weight: bold;
-	font-size: 2rem;
+	font-size: 1.4rem;
 	width: 100%;
 `;
 
@@ -48,4 +48,11 @@ export const MovieVotes = styled.div`
 	display: flex;
 	font-size: 1.4rem;
 	gap: 10px;
+`;
+
+export const ImageContainer = styled.div`
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+	background-color: #131313;
+	border-radius: 10px;
+	margin-bottom: 15px;
 `;
