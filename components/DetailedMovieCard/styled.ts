@@ -21,12 +21,6 @@ export const MovieTitle = styled.h2`
 	width: 100%;
 `;
 
-export const StyledImage = styled(Image)`
-	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
-	max-width: 100%;
-	border-radius: 5px;
-`;
-
 export const GenresList = styled.ul`
 	display: flex;
 	justify-content: center;
@@ -55,4 +49,12 @@ export const ImageContainer = styled.div`
 	background-color: #131313;
 	border-radius: 10px;
 	margin-bottom: 15px;
+	display: flex;
+	align-items: center;
+`;
+
+export const StyledImage = styled(Image)`
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+	max-width: 100%;
+	border-radius: 5px;
 `;

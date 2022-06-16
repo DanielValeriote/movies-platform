@@ -7,11 +7,12 @@ const DetailedMovieCard = ({ movieData }: Props) => {
 	const {title, overview, backdrop_path, poster_path, genres, vote_average, vote_count, original_title } = movieData;
 
 	let imgWidth = backdrop_path ? 780 : 342;
+
 	const imageBaseUrl = `https://image.tmdb.org/t/p/w${imgWidth}`;
 
 	return (
 		<DetailedMovie>
-			<ImageContainer style={{ width: imgWidth, height: backdrop_path ? 439 : 450 }}>
+			<ImageContainer style={{ maxWidth: imgWidth}}>
 				<StyledImage src={`${imageBaseUrl}${backdrop_path || poster_path}`} alt={title || original_title} width={imgWidth} height={backdrop_path ? 439 : 450} />
 			</ImageContainer>
 			<MovieTitle>{title || original_title}</MovieTitle>
