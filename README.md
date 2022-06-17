@@ -16,4 +16,4 @@ Abra http://localhost:3000 para ver as mudanças em tempo real.
 
 ## Deploy na Vercel
 
-Clique [**AKI**](https://next-movies-dv.vercel.app/) para ver o app pronto, já em produção na Vercel.
+Clique [**AQUI**](https://next-movies-dv.vercel.app/) para ver o app pronto, já em produção na Vercel.
