@@ -18,7 +18,7 @@ const Home: NextPage = ({ allMoviesList }: InferGetStaticPropsType<typeof getSta
     <div>
       <Head>
         <title>Início</title>
-        <meta name="description" content="Movies info platform created with NextJs" />
+        <meta name="description" content="Plataforma para consulta de informações de filmes." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
