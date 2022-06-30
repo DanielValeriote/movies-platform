@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 type Props = {
 	children: React.ReactNode
@@ -15,7 +15,7 @@ export const List = styled.ul`
 const SearchList = ({children}: Props) => {
 	return (
 		<List>{children}</List>
-	)
+	);
 };
 
 export default SearchList;

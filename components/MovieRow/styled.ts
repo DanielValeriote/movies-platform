@@ -30,8 +30,8 @@ export const RowMovementArrow = styled.span<MArrowProps>`
 	height: 100%;
 	position: absolute;
 	${(props) => {
-		if (props.direction === "right") return "right: 0;"
-		return "left: 0;"
+		if (props.direction === "right") return "right: 0;";
+		return "left: 0;";
 	}}
 	top: 0;
 	background-color: rgba(0,0,0,0.3);

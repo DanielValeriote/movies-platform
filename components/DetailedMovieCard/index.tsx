@@ -1,12 +1,12 @@
-import { DetailedMovieData } from '../../types';
-import { DetailedMovie, MovieTitle, StyledImage, GenresList, GenreItem, MovieVotes, ImageContainer } from './styled';
+import { DetailedMovieData } from "../../types";
+import { DetailedMovie, MovieTitle, StyledImage, GenresList, GenreItem, MovieVotes, ImageContainer } from "./styled";
 
 type Props = {movieData: DetailedMovieData};
 
 const DetailedMovieCard = ({ movieData }: Props) => {
 	const {title, overview, backdrop_path, poster_path, genres, vote_average, vote_count, original_title } = movieData;
 
-	let imgWidth = backdrop_path ? 780 : 342;
+	const imgWidth = backdrop_path ? 780 : 342;
 
 	const imageBaseUrl = `https://image.tmdb.org/t/p/w${imgWidth}`;
 
@@ -24,7 +24,7 @@ const DetailedMovieCard = ({ movieData }: Props) => {
 			</GenresList>
 			<MovieVotes>
 				{vote_average > 0 && 
-				<div style={{color: vote_average > 6.5 ? 'green' : vote_average < 5 ? 'red' : 'yellow', fontWeight: 'bold'}}>
+				<div style={{color: vote_average > 6.5 ? "green" : vote_average < 5 ? "red" : "yellow", fontWeight: "bold"}}>
 					{vote_average}
 				</div>}
 				<div>
@@ -32,7 +32,7 @@ const DetailedMovieCard = ({ movieData }: Props) => {
 				</div>
 			</MovieVotes>
 		</DetailedMovie>
-	)
+	);
 };
 
 export default DetailedMovieCard;

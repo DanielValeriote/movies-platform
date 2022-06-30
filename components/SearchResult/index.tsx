@@ -1,6 +1,6 @@
-import { IMovie } from '../../types';
-import { MovieResult, MovieTitle, ImageContainer, StyledImage } from './styled';
-import Link from 'next/link';
+import { IMovie } from "../../types";
+import { MovieResult, MovieTitle, ImageContainer, StyledImage } from "./styled";
+import Link from "next/link";
 
 type Props = {
 	movie: IMovie
@@ -20,7 +20,7 @@ const SearchResult = ({movie}: Props) => {
 				<MovieTitle>{movie.title || movie.name}</MovieTitle>
 			</a>
 		</Link>
-	</MovieResult>	
+	</MovieResult>;	
 };
 
 export default SearchResult;

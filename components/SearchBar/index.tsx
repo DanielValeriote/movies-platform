@@ -1,5 +1,5 @@
-import { Form, Input, SearchButton, InputWrapper } from './styled';
-import {FaSearch} from 'react-icons/fa';
+import { Form, Input, SearchButton, InputWrapper } from "./styled";
+import {FaSearch} from "react-icons/fa";
 
 type Props = {
 	searchValue: string,
