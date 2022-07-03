@@ -19,6 +19,8 @@ const Home: NextPage = ({ allMoviesList }: InferGetStaticPropsType<typeof getSta
 			<Head>
 				<title>Início</title>
 				<meta name="description" content="Plataforma para consulta de informações de filmes." />
+				<meta name="author" content="Daniel Valeriote" />
+				<meta name="keywords" content="Filmes, informação de filmes, next, nextjs, next.js." />
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
