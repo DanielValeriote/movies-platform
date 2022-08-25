@@ -1,4 +1,5 @@
 import { NextPage } from "next";
+import Head from "next/head";
 import Link from "next/link";
 
 import React from "react";
@@ -25,12 +26,17 @@ const NotFoundMessage = styled.h1`
 
 const NotFound: NextPage = () => {
   return (
-    <Container>
-      <NotFoundMessage>Página não encontrada.</NotFoundMessage>
-      <Link href="/" passHref>
-        <a>Voltar ao início</a>
-      </Link>
-    </Container>
+    <>
+      <Head>
+        <title>404 - Página não encontrada.</title>
+      </Head>
+      <Container>
+        <NotFoundMessage>Página não encontrada.</NotFoundMessage>
+        <Link href="/" passHref>
+          <a>Voltar ao início</a>
+        </Link>
+      </Container>
+    </>
   );
 };
 
